@@ -2,12 +2,26 @@ import * as React from 'react';
 import * as ReactDOM from 'react-dom/client';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import './index.css';
-import Root from './roots/Root.jsx';
+import Home from './roots/Home.jsx';
+import ErrorPage from './roots/ErrorPage.jsx';
+import Calendar from './components/CalendarView';
+import Dashboard from './components/Dashboard';
 
 const router = createBrowserRouter([
   {
-    path: "/",
-    element: <Root />,
+    path: '/',
+    element: <Home />,
+    errorElement: <ErrorPage />,
+    children: [
+      {
+        path: 'dashboard',
+        element: <Dashboard />,
+      },
+      {
+        path: 'calendar',
+        element: <Calendar />,
+      },
+    ],
   },
 ]);
 

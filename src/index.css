@@ -4,6 +4,8 @@
 
 html {
   box-sizing: border-box;
+  width: 100%;
+  background-color: white;
 }
 *,
 *:before,
@@ -17,6 +19,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  width: 100%;
 }
 
 code {
