@@ -4,7 +4,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import './index.css';
 import Home from './roots/Home.jsx';
 import ErrorPage from './roots/ErrorPage.jsx';
-import Calendar from './components/CalendarView';
+import CalendarView from './components/CalendarView';
 import Dashboard from './components/Dashboard';
 
 const router = createBrowserRouter([
@@ -19,7 +19,7 @@ const router = createBrowserRouter([
       },
       {
         path: 'calendar',
-        element: <Calendar />,
+        element: <CalendarView />,
       },
     ],
   },

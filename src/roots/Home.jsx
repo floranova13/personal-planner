@@ -1,4 +1,5 @@
 /* eslint-disable react/prop-types */
+import { Outlet } from 'react-router-dom';
 import { useState } from 'react';
 import {
   Bars3Icon,
@@ -31,7 +32,7 @@ const userNavigation = [
   { name: 'Sign out', href: '#' },
 ];
 
-export default function Home({ children }) {
+export default function Home() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
   return (
@@ -94,7 +95,7 @@ export default function Home({ children }) {
           </div>
 
           <main className='py-10'>
-            <div className='px-4 sm:px-6 lg:px-8'>{children}</div>
+            <div className='px-4 sm:px-6 lg:px-8'><Outlet /></div>
           </main>
         </div>
       </div>

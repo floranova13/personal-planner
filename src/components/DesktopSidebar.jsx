@@ -16,6 +16,7 @@ export default function DesktopSidebar({ navigation, projects }) {
               src={poise}
               alt='poise logo'
             />
+            <h2 className='m-2 font-extrabold italic'>Poise</h2>
           </div>
           <nav className='flex flex-1 flex-col'>
             <ul role='list' className='flex flex-1 flex-col gap-y-7'>

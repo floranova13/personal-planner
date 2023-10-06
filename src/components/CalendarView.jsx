@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import Calendar from 'react-calendar';
 import { addDays, isSameDay } from '../utils';
+import 'react-calendar/dist/Calendar.css';
 
 const today = new Date();
 const tomorrow = addDays(today, 1);
@@ -24,7 +25,7 @@ function tileContent({ date, view }) {
   if (view === 'month') {
     // Check if a date React-Calendar wants to check is on the list of dates to add class to
     if (datesToAddContentTo.find(dDate => isSameDay(dDate, date))) {
-      return 'My content';
+      return '\nMy content';
     }
   }
 }
@@ -34,6 +35,7 @@ export default function CalendarView() {
 
   return (
     <div>
+      <h1>Calendar</h1>
       <Calendar
         onChange={setDate}
         value={date}
